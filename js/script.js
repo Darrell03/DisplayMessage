@@ -1,17 +1,18 @@
 function init(){
 	//add your javascrip between these two lines of code
 	function myEventFuntion(){
-		var e4 = document.getElementById('entryinput');
-		e4.value = ": Hello World";
-		alert("Darrell Lee:" + e4.value);
+		var inputText = document.getElementById('entryinput');
+		var outputText = document.getElementById('textoutput');
+    outputText.textContent = inputText.value;
+		alert("Darrell Lee: " + inputText.value);
 	}
 
-	var d4 = document.getElementById('entrybutton');
-	d4.addEventListener('click', myEventFuntion);
-	d4.addEventListener('click', function() {
+	var onBtnPush = document.getElementById('entrybutton');
+	onBtnPush.addEventListener('click', myEventFuntion);
+	onBtnPush.addEventListener('click', function() {
 		console.log('I was clicked');
-		d4.style.backgroundColor = '#C00';
-		d4.innerHTML = '<strong>Goodbye</strong>';
+		onBtnPush.style.backgroundColor = '#C00';
+		onBtnPush.innerHTML = '<strong>Goodbye</strong>';
 	});
 }
 
